@@ -1,18 +1,18 @@
 # Introduction
 
-The script `run_analysis.R`performs the 5 steps described in the course project's definition.
+The script `run_analysis.r`performs the 5 steps described in the course project's definition.
 
-* First, all the similar data is merged using the `rbind()` function. By similar, we address those files having the same number of columns and referring to the same entities.
-* Then, only those columns with the mean and standard deviation measures are taken from the whole dataset. After extracting these columns, they are given the correct names, taken from `features.txt`.
-* As activity data is addressed with values 1:6, we take the activity names and IDs from `activity_labels.txt` and they are substituted in the dataset.
-* On the whole dataset, those columns with vague column names are corrected.
-* Finally, we generate a new dataset with all the average measures for each subject and activity type (30 subjects * 6 activities = 180 rows). The output file is called `averages_data.txt`, and uploaded to this repository.
+* Firstly the similar data is merged using the `rbind()` function. By similar, we understand the files with the same dimensions and similar names' structure.
+* Secondly columns with the mean and standard deviation measures are selected from the whole dataset. After extracting these columns, they are named according to the `features.txt` file.
+* As 3rd step, activity names are extracted from `activity_labels.txt` and assigned to the dataset.
+* As 4th step, descriptive variables names are used in order to label the dataset.
+* Finally, a new dataset with all the average measures for each subject and activity type is generated. The output file is called `Tidy.Averages.txt`, and uploaded to this repository.
 
 # Variables
 
-* `x_train`, `y_train`, `x_test`, `y_test`, `subject_train` and `subject_test` contain the data from the downloaded files.
-* `x_data`, `y_data` and `subject_data` merge the previous datasets to further analysis.
-* `features` contains the correct names for the `x_data` dataset, which are applied to the column names stored in `mean_and_std_features`, a numeric vector used to extract the desired data.
-* A similar approach is taken with activity names through the `activities` variable.
-* `all_data` merges `x_data`, `y_data` and `subject_data` in a big dataset.
-* Finally, `averages_data` contains the relevant averages which will be later stored in a `.txt` file. `ddply()` from the plyr package is used to apply `colMeans()` and ease the development.
+* `Train.X_train`, `Train.y_train`, `Test.X_test`, `Test.y_test`, `Train.subject_train` and `Test.subject_test` contain the data from the downloaded files.
+* `All.X`, `All.y` and `All.subject` keep the merged data for the later analysis.
+* `Main.Features` keeps the right names for the `All.X` dataset, which are applied to the column names stored in `iColNum`, a numeric vector used to select desired data.
+* A similar approach is taken with activity names through the `Main.Activities` variable.
+* `All.Data` combines `All.X`, `All.y` and `All.subject` in a big dataset.
+* Finally, the relevant averages are calculated with `ddply()` from `plyr` package and stored in `Tidy.Averages` data frame, later exported to text file under similar name. 
