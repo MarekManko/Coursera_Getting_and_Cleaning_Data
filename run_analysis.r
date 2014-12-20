@@ -1,13 +1,11 @@
-# Step 0 
-# INITIAL SETTINGS
+# 0. INITIAL SETTINGS ####
 library(plyr)
 
 # Set working directory
 # Please change your working directory here:
 setwd("E:\\Marek\\Studia\\Coursera\\Getting and Cleaning Data\\W3\\")
 
-# Step 1 
-# MERGE THE TRAINING AND TEST DATA SETS TO CREATE ONE DATA SET
+# 1. MERGE THE TRAINING AND TEST DATA SETS TO CREATE ONE DATA SET ####
 Train.X_train <- read.table("UCI HAR Dataset\\train\\X_train.txt")
 Train.y_train <- read.table("UCI HAR Dataset\\train\\y_train.txt")
 Train.subject_train <- read.table("UCI HAR Dataset\\train\\subject_train.txt")
