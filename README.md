@@ -5,7 +5,7 @@ Coursera_Getting_and_Cleaning_Data
 This repository contains my work for the Course Project of Coursera "Getting and Cleaning Data", part of The Data Science specialization.
 
 ### Raw Data
-The data for the project are available <a href = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip">here</a>. A full description is available at the site where the data was obtained: <a href = "http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones">Human Activity Recognition Using Smartphones</a>.
+The data for the project can be downloaded <a href = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip">here</a>. A full description is available at the site where the data was obtained: <a href = "http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones">Human Activity Recognition Using Smartphones</a>.
 
 ### Script and Tidy Data Set
 The R-script that is required to fullfil the project requirements is available in the `run_analysis.r`. 
