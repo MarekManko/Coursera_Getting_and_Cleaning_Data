@@ -1,3 +1,5 @@
+# All the formatting is well interpreted by R-Studio editor.
+
 # 0. INITIAL SETTINGS ####
 library(plyr)
 
